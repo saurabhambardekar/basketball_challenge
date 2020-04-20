@@ -1,0 +1,32 @@
+  .bgimg {
+    background-image: url('basss.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-size: 40px;
+    color:#f1ff00;
+    width: 100%;
+  }
+  
+  
+  .bottomleft {
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+  }
+  
+ .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  hr {
+    width: 40%;
+    background: red;
+    height: 1px;
+
+  }

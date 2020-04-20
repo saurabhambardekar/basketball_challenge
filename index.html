@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amazing LCO</title>
+  <link rel = "icon" href = "sports-logo-transparent.png" type = "image/x-icon"> 
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./h1style.css">
+  <link rel="stylesheet" type="text/css" href="./tournament.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./login.css">
+  <link rel="stylesheet" type="text/css" href="./hamburger.css">
+  <link rel="stylesheet" type="text/css" href="./team.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav-container" id="navbar">
+    <h1>LCO</h1>
+    <ui class="main-nav">
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <li><a href="#aboutus"><i class="fas fa-basketball-ball"></i>About us</a></li>
+      <li><a href='#tournament'><i class="fas fa-basketball-ball"></i>Tournament</a></li>
+      <li><a href='#team'><i class="fas fa-basketball-ball"></i>Team</a></li>
+      <li><a href="#video"><i class="fas fa-basketball-ball"></i>Video</a></li>
+      <li><a href="#faqs"><i class="fas fa-basketball-ball"></i>FAQs</a></li>
+      <li><a href="#contact"><i class="fas fa-basketball-ball"></i>Contact Us</a></li> 
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-basketball-ball"></i>Login</button>    
+    </li>
+    </ui>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#aboutus">About us</a>
+      <a href="#tournament">Tournament</a>
+      <a href="#team">Team</a>
+      <a href="#video">Video</a>
+      <a href="#faqs">FAQS</a>
+      <a href="#contact">Contact Us</a>
+      <button class="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    </div>
+    
+    <button class="openbtn" onclick="openNav()">☰</button>  
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+    </script>
+    <div id="id01" class="modal">
+          
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="sports-logo-transparent.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+  </nav>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+  <div class="image-container">
+    <div class="image-container-inner">
+    <img src="sports-logo-transparent.png" alt="logo" class="logo-img"/>
+    <h1 class="ml10">
+        <span class="text-wrapper">
+          <span class="letters">GO FIGHT FOR A TEAM !!</span>
+        </span>
+    </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
+    <script>
+        var textWrapper = document.querySelector('.ml10 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml10 .letter',
+            rotateY: [-90, 0],
+            duration: 1300,
+            delay: (el, i) => 45 * i
+        }).add({
+            targets: '.ml10',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+    </script>  
+    </div>
+     <section>
+      <marquee behavior="alternate" scrollamount="40">
+      <marquee behavior="alternate" direction="up" scrollamount="30">
+        <img src="https://cdn.clipart.email/61d5b28ddc23ddf6dacccaf434c3d583_basketball-clipart-free-printable-2-clipartpost_640-638.png" width="150" alt="Basketball Clipart" class="ball" />
+      </marquee>
+      </marquee>
+    </section> 
+  </div>
+    <div class="main-container">
+      <div class="About-us" id="aboutus">
+        <div class="About-us-wrapper">
+          <h2>About us</h2>
+          <img class="basket-image" src="artimg-1.png" alt="basket-ball"/>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius animi porro maxime perferendis?
+            Velit expedita quos modi dicta molestias veniam maiores, eos, inventore ipsam nostrum repellat harum perferendis vitae ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid maiores veniam cumque nisi doloribus dignissimos, magnam, 
+            totam corrupti ipsum odio officiis sunt. Nam quo suscipit quae, sint natus necessitatibus quidem!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vero in deserunt distinctio ipsa modi vel culpa, quis ratione, 
+          </p>
+        </div> 
+    </div>  
+    <div class="tournament" id="tournament">
+      <div class="bgimg">
+        <div class="topleft">
+          <img src="sports-logo-transparent.png" alt="logo" style="width: 36%"/>
+        </div>
+        <div class="middle">
+          <h1>BIG TOURNAMENT COMING SOON</h1>
+          <hr>
+          <p id="demo" style="font-size:30px"></p>
+        </div>
+        <div class="bottomleft">
+          <p>Stay Tuned!</p>
+        </div>
+      </div>
+        <script>
+          var countDownDate = new Date("June 5, 2020 15:37:25").getTime();
+          var countdownfunction = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+          
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+    </div>
+
+    <div class="players-images" id="team">
+      <h2 class="player-title">TEAM</h2>
+      <div class="players-upper-row">
+        <ul class="ch-grid">
+          <li>
+            <div class="ch-item ch-img-1">
+              <div class="ch-info">
+                <h3>Player 1</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ch-img-2">
+              <div class="ch-info">
+                <h3>Player 2</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ch-img-3">
+              <div class="ch-info">
+                <h3>Player 3</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="players-bottom-row">
+        <ul class="ch-grid">
+          <li>
+            <div class="ch-item ch-img-4">
+              <div class="ch-info">
+                <h3>Player 4</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ch-img-5">
+              <div class="ch-info">
+                <h3>Player 5</h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="video" id="video">
+      <h2><span>Videos</span></h2><iframe  src="https://www.youtube.com/embed/hqvGOPB0KmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    <div class="faqs" id="faqs">
+      <h2>FAQs </h2>
+      <div class="faqs-section">
+        <button class="accordion">Question 1</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Question 2</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Question 3</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion">Question 4</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>  
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var panel = document.getElementsByClassName('panel');
+
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+              var setClasses = !this.classList.contains('active');
+                setClass(acc, 'active', 'remove');
+                setClass(panel, 'show', 'remove');
+                
+                if (setClasses) {
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        }
+
+        function setClass(els, className, fnName) {
+            for (var i = 0; i < els.length; i++) {
+                els[i].classList[fnName](className);
+            }
+        }
+      </script>
+    </div>
+    <div class="contact" id="contact">
+      <div class="contact-info">
+        <h2><span>MAPS</span></h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.91597990567!2d-74.1201070919916!3d40.69740302599635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1586515288982!5m2!1sen!2sin" width="1005" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+    <footer>
+      <div class="names">
+        <p>Posted by: Aditya Bhabhe & Saurabh Ambardekar</p>
+      </div>   
+      <div class="address">   
+        <address>Address: LCO Basketball Ground, 55 - Fictional Homes, Fictional Road,Near Fictional Lake,India</address>
+        <p>Contact US: Mobile:<a href="tel:+91999999999">+91999999999</a></p>
+      </div>    
+    </footer>  
+  </div>
+  
+</body>
+</html>
